@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  curso = "JS com TDD"
+  preco = 200.00
+  avaliacao = 5
 }
