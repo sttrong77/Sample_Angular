@@ -1,3 +1,15 @@
+Cadastrar cursos
+<br><br>
+<input type="text" [(ngModel)]="nome" placeholder="Digite o nome do curso"/>
+<br>
+<input type="number" [(ngModel)]="preco" placeholder="Digite o preço do curso"/>
+<br>
+<input type="number" [(ngModel)]="avaliacao" placeholder="Digite a nota do curso"/>
+<br>
+<br>
+<button (click)="add()">Cadastrar</button>
+<br>
+<br>
 Lista de Cursos
 <table>
   <thead>
@@ -8,10 +20,10 @@ Lista de Cursos
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>{{curso | lowercase}}</td>
-      <td>{{preco | currency: 'BRL': true}}</td>
-      <td>{{avaliacao}} estrelas</td>
+    <tr *ngFor="let curso of cursos ">
+      <td>{{curso.nome | lowercase}}</td>
+      <td>{{curso.preco | currency: 'BRL': true}}</td>
+      <td>{{curso.avaliacao}} estrelas</td>
     </tr>
   </tbody>
 </table>
