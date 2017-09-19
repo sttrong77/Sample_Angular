@@ -10,9 +10,9 @@ Cadastrar cursos
 <button (click)="add()">Cadastrar</button>
 <br>
 <br>
-Lista de Cursos
-<table>
-  <thead>
+<h1 class="text-center">Lista de Cursos</h1>
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-inverse">
     <tr>
       <th>Nome</th>
       <th>Preço</th>
@@ -20,9 +20,9 @@ Lista de Cursos
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let curso of cursos ">
-      <td>{{curso.nome | lowercase}}</td>
-      <td>{{curso.preco | currency: 'BRL': true}}</td>
+    <tr *ngFor="let curso of cursos">
+      <td>{{curso.nome | uppercase }}</td>
+      <td>{{curso.preco | currency: 'BRL': true }}</td>
       <td>{{curso.avaliacao}} estrelas</td>
     </tr>
   </tbody>

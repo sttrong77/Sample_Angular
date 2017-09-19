@@ -15,10 +15,6 @@ export class AppComponent {
   
 
   constructor(){
-    this.nome = ""
-    this.preco = 0
-    this.avaliacao = 0
-
     this.cursos = [
       {
         nome: 'Laravel básico',
@@ -38,6 +34,10 @@ export class AppComponent {
     ]
 
   }
+
+
+
+  
 
   add(){
     this.cursos.unshift({nome: this.nome,
